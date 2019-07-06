@@ -75,6 +75,8 @@ String entropyToMnemonic(String entropyString,{String language=_defaultLanguage}
       .allMatches(bits)
       .map((match) => match.group(0))
       .toList(growable: false);
+  print("***************");
+  print(language);
   List<String> wordlist = WORDLIST[language];
   String words = chunks.map((binary) => wordlist[_binaryToByte(binary)]).join(' ');
   return words;
